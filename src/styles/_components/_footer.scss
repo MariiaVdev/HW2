@@ -1,0 +1,89 @@
+@import "../_abstracts/variables";
+@import "../_abstracts/mixins";
+
+
+.footer--background {
+    background-color: $colorFooterBg;
+}
+
+
+.footer__content {
+
+    text-align: center;
+    padding: 38px 35px 26px 35px;
+
+    .footer__title {
+        @include title;
+        text-transform: uppercase;
+
+        color: $colorFooterTitle;
+        margin-bottom: 8px;
+
+        @media (min-width: $tablet-bp) {
+           font-size: 16px;
+        }
+    }
+
+
+    .footer__subtitle {
+        @include FooterText;
+        height: 53px;
+        margin-bottom: 26px;
+
+        @media (min-width: $tablet-bp) and (max-width: $desktop-bp) {
+            font-size: 16px;
+            height: 44px;
+            padding-right: 103px;
+            padding-left: 83px;
+        }
+
+        @media (min-width: $desktop-bp) {
+            font-size: 16px;
+            height: 44px;
+            padding-right: 427px;
+            padding-left: 419px;
+        }
+    }
+
+    .footer__links {
+        margin-bottom: 25px; 
+
+        .footer__item {
+            text-decoration: none;
+            margin-right: 6px;
+        }
+    }
+
+    
+
+    .footer__adress-text {
+        @include description;
+        height: 63px;
+        line-height: 24px;
+        color: $colorFooterText;
+        padding-right: 33px;
+        padding-left: 35px;
+
+        @media (min-width: $tablet-bp) and (max-width: $desktop-bp){
+            font-size: 16px;
+            height: 26px;
+            line-height: 26px;
+            padding-right: 134px;
+        padding-left: 123px;
+         
+        }
+
+        @media (min-width: $desktop-bp) {
+            font-size: 16px;
+            height: 26px;
+            line-height: 26px;
+            padding-right: 458px;
+            padding-left: 459px;
+        }
+    }
+
+
+}
+
+
+

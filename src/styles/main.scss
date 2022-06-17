@@ -1,0 +1,16 @@
+@import "./reset";
+@import "./_components/header";
+@import "./_components/posts";
+@import "./_components/inst_shots";
+@import "./_components/footer";
+
+
+body{
+    font-family: sans-serif;
+  }
+
+.container {
+    max-width: $desktop-bp;
+    margin: 0 auto;
+    min-width: 320px;
+}

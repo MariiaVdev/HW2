@@ -1,0 +1,155 @@
+@import "../_abstracts/variables";
+@import "../_abstracts/mixins";
+
+.header__nav {
+    position: relative;
+
+}
+
+.header__menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 23px;
+    right: 28px;
+    width: 44px;
+    height: 37px;
+    border: none;
+    background-color: transparent;
+
+
+    @media (min-width: $tablet-bp) {
+        display: none;
+    }
+
+
+    .header__menu-image--lines {
+        display: inline-block;
+        width: 37px;
+        height: 37px;
+        background-image: url("../../../dist/img/menu.jpg");
+    }
+
+    .header__menu-image--cancel {
+        display: inline-block;
+        width: 37px;
+        height: 37px;
+        background-image: url("../../../dist/img/cancel.jpg");
+    }
+}
+
+
+.header__nav-list {
+    display: none;
+
+    @media (min-width: $tablet-bp) and (max-width: $desktop-bp) {
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        margin: 0;
+        padding: 41px 167px 43px 164px;
+        column-gap: 34px;
+        background-color: transparent;
+
+
+
+    }
+
+    @media (min-width: $desktop-bp) {
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        margin: 0;
+        background-color: transparent;
+        padding: 45px 393px 51px 394px;
+        column-gap: 68px;
+
+    }
+}
+
+
+.header__nav-list-block {
+    display: inline-block;
+    padding: 5px 56px 2px 12px;
+    position: absolute;
+    top: 60px;
+    right: 28px;
+    background-color: $colorMenuBg;
+    margin: 0;
+
+    @media (min-width: $tablet-bp) {
+        display: none;
+
+
+    }
+}
+
+
+.header__nav-item {
+    list-style: none;
+    margin-bottom: 8px;
+
+
+    &:hover {
+        background-color: $colorHover;
+    }
+
+
+    .header__nav-link {
+        @include menu;
+
+    }
+
+    .header__nav-link--active {
+        color: $colorActive;
+    }
+
+}
+
+.header__nav-link--active {
+    color: #57A4A4;
+}
+
+
+.header__nav-list--hidden {
+    display: none;
+}
+
+.header__hero-image-wrap {
+    padding: 83px 0px 0 0px;
+
+    @media (min-width: $tablet-bp) {
+        padding: 0px 0px 0 0px;
+    }
+
+}
+
+
+.header__hero-image {
+
+    background-image: url("../../../dist/img/intro_1_mb.jpg");
+    background-size: cover;
+    height: 150px;
+    margin: 0 28px 0 25px;
+
+
+    @media (min-width: $mobile-bp) and (max-width: $desktop-bp) {
+
+        background-image: url("../../../dist/img/intro_2_tb.jpg");
+        height: 361px;
+        margin: 0 28px 0 25px;
+    }
+
+    @media (min-width: $tablet-bp) and (max-width: $desktop-bp) {
+
+        margin: 0 92px 0 80px;
+    }
+
+
+    @media (min-width: $desktop-bp) {
+        background-image: url("../../../dist/img/intro_3_d.jpg");
+        height: 550px;
+        margin: 0 215px;
+
+    }
+
+}

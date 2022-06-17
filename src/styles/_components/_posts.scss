@@ -1,0 +1,164 @@
+@import "../_abstracts/variables";
+@import "../_abstracts/mixins";
+
+.posts__container {
+    margin-left: 28px;
+    margin-right: 26px;
+
+    @media (min-width: $tablet-bp) and (max-width: $desktop-bp) {
+
+        margin-left: 92px;
+        margin-right: 80px;
+        margin-bottom: 60px;
+    }
+
+    @media (min-width: $desktop-bp) {
+
+        margin: 0px 215px 60px 215px;
+
+    }
+
+}
+
+.posts__main-title {
+    @include title;
+    text-transform: uppercase;
+    padding-top: 38px;
+    padding-bottom: 23px;
+
+    @media (min-width: $tablet-bp) and (max-width: $desktop-bp) {
+
+        padding-top: 56px;
+        padding-bottom: 24px;
+
+    }
+
+    @media (min-width: $desktop-bp) {
+
+        padding-top: 66px;
+        padding-bottom: 24px;
+
+    }
+}
+
+.posts__main-flex {
+    @media (min-width: $desktop-bp) {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .posts__recent-posts {
+        @media (min-width: $mobile-bp) {
+
+            display: flex;
+            margin-bottom: 32px;
+        }
+
+        .posts__img {
+            display: block;
+            width: 160px;
+            height: 140px; 
+            
+        }
+
+    }
+
+
+
+}
+
+
+.posts__all-text {
+    margin: 0;
+    padding-top: 11px;
+       
+    @media (min-width: $mobile-bp) and (max-width: $desktop-bp) {
+        padding-top: 0;
+        padding-left: 21px;
+        width: 56%;
+    }
+
+
+    @media (min-width: $desktop-bp) {
+        padding-left: 21px;
+        padding-right: 25px;
+
+    }
+
+    .posts__title {
+        @include title;
+
+        height: 30px;
+        line-height: 30px;
+        margin: 0;
+
+        display: inline-block;
+    }
+
+
+    .posts_comment {
+        @include menu;
+
+        height: 20px;
+        line-height: 20px;
+        text-transform: none;
+        margin-top: 0;
+        margin-bottom: 29px;
+
+        color: $colorTextComment;
+
+        display: block;
+
+        @media (min-width: $mobile-bp) {
+
+            margin-top: 0px;
+            margin-bottom: 13px;
+        }
+
+        @media (min-width: $tablet-bp) {
+
+            margin-top: 0px;
+            display: block;
+        }
+
+    }
+
+    .posts__description {
+        display: none;
+        margin: 0;
+
+        @media (min-width: $tablet-bp) and (max-width: $desktop-bp) {
+            @include description;
+
+            display: inline-block;
+            padding-bottom: 34px;
+
+        }
+
+        @media (min-width: $desktop-bp) {
+            @include description;
+
+            display: block;
+
+        }
+
+    }
+
+}
+
+.posts__recent-posts--hidden {
+    display: none;
+
+    @media (min-width: $tablet-bp) {
+
+        display: block;
+
+    }
+
+}
+
+
+
