@@ -47,6 +47,11 @@
 
     .footer__links {
         margin-bottom: 25px; 
+        padding-top: 26px;
+
+        @media (min-width: $tablet-bp) {
+            padding-top: 37px;
+        }
 
         .footer__item {
             text-decoration: none;
@@ -63,6 +68,7 @@
         color: $colorFooterText;
         padding-right: 33px;
         padding-left: 35px;
+        text-decoration: none;
 
         @media (min-width: $tablet-bp) and (max-width: $desktop-bp){
             font-size: 16px;
